@@ -17,7 +17,12 @@ class _HomepageState extends State<Homepage> {
         child: Container(
           color: bgColor, // background color defined in env
           child: Column(children: [
-            topWidget(),
+            topWidget(
+              currentClass: 'Etaj 1 - S6',
+              currentSubject: 'Informatica',
+              currentIntervalStart: '12:20',
+              currentIntervalEnd: '13:10',
+            ),
           ]),
         ),
       ),

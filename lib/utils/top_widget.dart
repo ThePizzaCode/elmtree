@@ -1,9 +1,22 @@
+// ignore_for_file: prefer_const_constructors, camel_case_types, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 import 'package:elmtree/utils/env.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
 class topWidget extends StatefulWidget {
-  const topWidget({super.key});
+  final String currentSubject;
+  final String currentClass;
+  final String currentIntervalStart;
+  final String currentIntervalEnd;
+
+  const topWidget({
+    Key? key,
+    required this.currentSubject,
+    required this.currentClass,
+    required this.currentIntervalStart,
+    required this.currentIntervalEnd,
+  }) : super(key: key);
 
   @override
   State<topWidget> createState() => _topWidgetState();
@@ -73,7 +86,7 @@ class _topWidgetState extends State<topWidget> {
                       ),
                     ),
                     Text(
-                      'Informatica',
+                      currentSubject,
                       style: TextStyle(
                         fontFamily: 'TimesNew',
                         fontSize: 30,
@@ -93,7 +106,7 @@ class _topWidgetState extends State<topWidget> {
                           size: 18,
                         ),
                         Text(
-                          'E2 - I2',
+                          currentClass,
                           style: TextStyle(
                             fontFamily: 'Nexa',
                             fontSize: 19,
