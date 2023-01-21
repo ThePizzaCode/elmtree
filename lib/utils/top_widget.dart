@@ -26,8 +26,6 @@ class _topWidgetState extends State<topWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
-      width: double.infinity,
       decoration: const BoxDecoration(
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(19),
@@ -35,20 +33,23 @@ class _topWidgetState extends State<topWidget> {
         ),
         image: DecorationImage(
             image: NetworkImage(
-              "https://i.imgur.com/Dt1bKPo.png",
+              "https://i.imgur.com/theG3oO.png",
             ),
             fit: BoxFit.cover),
       ),
       child: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 10, left: 20, right: 20),
+            padding: const EdgeInsets.only(
+              top: 10,
+              left: 20,
+              right: 20,
+            ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Icon(
-                  Icons.calendar_today_outlined,
-                  color: Colors.white,
+                SizedBox(
+                  width: 50, // width = Icons width + Sizedbox Width
                 ),
                 Text(
                   'Elmtree',
@@ -58,18 +59,29 @@ class _topWidgetState extends State<topWidget> {
                     color: Colors.white,
                   ),
                 ),
-                Icon(
-                  Icons.settings,
-                  color: Colors.white,
+                Row(
+                  children: [
+                    Icon(
+                      Icons.calendar_today_outlined,
+                      color: Colors.white,
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Icon(
+                      Icons.settings,
+                      color: Colors.white,
+                    ),
+                  ],
                 ),
               ],
             ),
           ),
           Padding(
             padding: const EdgeInsets.only(
-              right: 40,
-              left: 40,
-              top: 10,
+              right: 30,
+              left: 30,
+              top: 20,
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -86,7 +98,7 @@ class _topWidgetState extends State<topWidget> {
                       ),
                     ),
                     Text(
-                      currentSubject,
+                      'Informatică',
                       style: TextStyle(
                         fontFamily: 'TimesNew',
                         fontSize: 30,
@@ -105,8 +117,11 @@ class _topWidgetState extends State<topWidget> {
                           color: Colors.white,
                           size: 18,
                         ),
+                        SizedBox(
+                          width: 5,
+                        ),
                         Text(
-                          currentClass,
+                          'E1 - S4',
                           style: TextStyle(
                             fontFamily: 'Nexa',
                             fontSize: 19,
@@ -130,7 +145,12 @@ class _topWidgetState extends State<topWidget> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(20.0),
+            padding: const EdgeInsets.only(
+              left: 10,
+              right: 10,
+              top: 20,
+              bottom: 70,
+            ),
             child: LinearPercentIndicator(
               backgroundColor: Colors.white,
               progressColor: accentGreen,
