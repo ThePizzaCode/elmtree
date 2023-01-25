@@ -86,6 +86,9 @@ flutter:
         - asset: assets\fonts\Nexa.ttf
         - asset: assets\fonts\NexaBold.ttf
           weight: 700
+    - family: Montserrat
+      fonts:
+        - asset: assets\fonts\Montserrat-VariableFont_wght.ttf
 
   #
   # For details regarding fonts from package dependencies,

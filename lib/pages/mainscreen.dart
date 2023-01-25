@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:elmtree/pages/subjects_page.dart';
 import 'package:elmtree/utils/subject_card.dart';
 import 'package:elmtree/utils/top_widget.dart';
 import 'package:elmtree/utils/upcoming_card.dart';
@@ -40,14 +41,23 @@ class _HomepageState extends State<Homepage> {
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(20)),
-                  height: 400,
+                  height: 440,
                   width: double.infinity,
                   child: Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: ListView(
                       addAutomaticKeepAlives: false,
                       children: [
-                        subjectCard(),
+                        GestureDetector(
+                          child: subjectCard(),
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const subjectPage()),
+                            );
+                          },
+                        ),
                         subjectCard(),
                         subjectCard(),
                         subjectCard(),
