@@ -7,6 +7,7 @@ import 'package:elmtree/utils/upcoming_card.dart';
 import 'package:flutter/material.dart';
 import 'package:elmtree/utils/env.dart';
 import 'package:assorted_layout_widgets/assorted_layout_widgets.dart';
+import 'package:http/http.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});

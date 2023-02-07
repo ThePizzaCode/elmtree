@@ -65,7 +65,7 @@ class upcomingCard extends StatelessWidget {
                     ],
                   ),
                   Text(
-                    '13:20 - 14:10',
+                    '13:20' + ' - 14:10',
                     style: TextStyle(
                       fontFamily: 'Nexa',
                       fontSize: 23,
