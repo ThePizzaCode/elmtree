@@ -1,7 +1,5 @@
 # Elmtree School Catalog
 
-![Elmtree Logo](link_catre_logo.png)
-
 Elmtree School Catalog is a comprehensive digital platform designed to simplify the management of school resources, streamline communication, and enhance the learning experience for students, teachers, and administrators.
 
 ## Features
